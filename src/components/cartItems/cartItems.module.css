@@ -1,0 +1,102 @@
+.cartContainer {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cartTitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.backLink {
+  display: block;
+  text-align: center;
+  color: rgb(139, 55, 67);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cartTable th, .cartTable td {
+  padding: 12px;
+  text-align: center;
+}
+
+.cartTable th {
+  border-bottom: 2px solid #ddd;
+}
+
+.cartProduct {
+  display: flex;
+  align-items: center;
+}
+
+.cartImage {
+  width: 220px;
+  height: 160px;
+  margin-right: 10px;
+}
+
+.removeBtn {
+  color: rgb(139, 55, 67);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.removeBtn:hover {
+  text-decoration: underline;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quantityControl button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.cartFooter {
+  margin-top: 20px;
+  text-align: right;
+  /* border-top: 1px solid rgb(216, 214, 214); */
+}
+
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.taxInfo {
+  font-size: 12px;
+  color: gray;
+  text-align: right;
+}
+
+
+.cartItem{
+  border-bottom: 1px solid #ccc;
+}
+.emptyCart{
+  text-align: center;
+  padding: 50px;
+  font-size: larger;
+  color: rgb(125, 31, 31);
+}

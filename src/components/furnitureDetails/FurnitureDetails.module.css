@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  min-height: 500px; /* Adjust height as needed */
+}
+
+.imageContainer { /* Changed from .image-container */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+}
+
+.details {
+  max-width: 400px;
+}
+
+.title {
+  font-size: 24px; /* Slightly bigger */
+  font-weight: bold;
+  color: #4d1b1b;
+}
+
+.description {
+  color: #555;
+  font-size: 18px; /* Slightly bigger */
+}
+
+.price {
+  font-size: 22px; /* Slightly bigger */
+  font-weight: bold;
+  color: #4d1b1b;
+}
+
+.button {
+  background-color: #431818;
+  color: #fff;
+  padding: 12px 24px; /* Increased padding */
+  border: none;
+  cursor: pointer;
+  font-size: 18px; /* Bigger button text */
+  margin-top: 10px;
+}
+
+

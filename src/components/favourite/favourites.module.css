@@ -1,0 +1,100 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+/* Grid for displaying three cards in a row */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures three cards per row */
+  gap: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Flexbox for title and price in a row */
+.infoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.productTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove Button */
+.removeBtn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.removeBtn:hover {
+  background: #c82333;
+}
+
+/* Responsive Design: Two cards per row on tablets */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive Design: One card per row on small screens */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

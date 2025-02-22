@@ -1,0 +1,84 @@
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 350px;
+  margin-top: 20px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.cardbody {
+  position: relative;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #72290c; /* Green for visibility */
+}
+
+.oldprice {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+.iconsContainer {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carticon, .hearticon {
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.carticon:hover {
+  color: #782a0e; /* Green */
+  transform: scale(1.1);
+}
+
+.hearticon:hover {
+  color: #dc3545; /* Red */
+  transform: scale(1.1);
+}
+
+
+.link {
+  text-decoration: none;
+  color: rgb(123, 36, 36);
+  display: block;
+}
+
+

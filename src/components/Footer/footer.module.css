@@ -1,0 +1,90 @@
+.footer {
+  background-color: #F6F4F2;
+  color: #947458;
+  padding: 60px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 30px;
+
+
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about, .account, .page {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #947458;
+}
+
+.detail p {
+  font-size: 1rem;
+  color: #929191;
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  /* border-bottom: 2px solid #947458; */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 8px 0;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+  transform: scale(1.05);
+}
+
+.link {
+  color: #947458;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #947458;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+  }
+
+  .about, .account, .page {
+      min-width: auto;
+  }
+}
