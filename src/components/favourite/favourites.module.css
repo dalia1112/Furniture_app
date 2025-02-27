@@ -44,7 +44,7 @@
   border-radius: 8px;
 }
 
-/* Flexbox for title and price in a row */
+
 .infoContainer {
   display: flex;
   justify-content: space-between;
@@ -69,7 +69,6 @@
   color: inherit;
 }
 
-/* Remove Button */
 .removeBtn {
   background: #dc3545;
   color: white;
@@ -85,14 +84,13 @@
   background: #c82333;
 }
 
-/* Responsive Design: Two cards per row on tablets */
+
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsive Design: One card per row on small screens */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(1, 1fr);

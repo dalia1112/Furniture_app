@@ -1,5 +1,3 @@
-
-
 import { useParams } from "react-router-dom";
 import axiosInstance from "../Axios/axiosinstance";
 import { useQuery } from "react-query";

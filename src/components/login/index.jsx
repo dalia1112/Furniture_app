@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
-import styles from "../Auth/Auth.module.css";
+import styles from "./login.module.css";
 import { useDispatch } from "react-redux";
 import { login } from "../../rtk/Slices/AuthSlice";
 
@@ -38,7 +38,7 @@ const Login = () => {
       if (!storedUser) {
         toast.error("User not registered. Please sign up first.", { position: "top-center" });
       } else if (storedUser.email === values.email && storedUser.password === values.password) {
-        // Include username in the login action
+        
         dispatch(login({ email: values.email, username: storedUser.username }));
         toast.success("Login successful!", { position: "top-center" });
         setTimeout(() => navigate("/"), 1500);

@@ -18,7 +18,6 @@ const Furniture = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    // Automatically select the first category when categories are loaded
     if (categories.length > 0) {
       dispatch(setSelectedCategoryItems(categories[0].items));
     }

@@ -3,10 +3,10 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  min-height: 500px; /* Adjust height as needed */
+  min-height: 500px;
 }
 
-.imageContainer { /* Changed from .image-container */
+.imageContainer {
   background-color: #f2f2f2;
   padding: 20px;
   border-radius: 10px;
@@ -22,18 +22,18 @@
 }
 
 .title {
-  font-size: 24px; /* Slightly bigger */
+  font-size: 24px; 
   font-weight: bold;
   color: #4d1b1b;
 }
 
 .description {
   color: #555;
-  font-size: 18px; /* Slightly bigger */
+  font-size: 18px; 
 }
 
 .price {
-  font-size: 22px; /* Slightly bigger */
+  font-size: 22px; 
   font-weight: bold;
   color: #4d1b1b;
 }
@@ -41,10 +41,10 @@
 .button {
   background-color: #431818;
   color: #fff;
-  padding: 12px 24px; /* Increased padding */
+  padding: 12px 24px; 
   border: none;
   cursor: pointer;
-  font-size: 18px; /* Bigger button text */
+  font-size: 18px; 
   margin-top: 10px;
 }
 

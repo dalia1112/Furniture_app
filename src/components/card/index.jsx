@@ -1,5 +1,3 @@
-// 
-
 /* eslint-disable react/prop-types */
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './card.module.css';
@@ -13,14 +11,14 @@ const Card = ({ product }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const favourites = useSelector((state) => state.favourite);
-  const { isAuthenticated } = useSelector((state) => state.auth); // Check if user is authenticated
+  const { isAuthenticated } = useSelector((state) => state.auth); 
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
     e.preventDefault();
 
     if (!isAuthenticated) {
-      // Redirect to login page if not authenticated
+      
       toast.error('Please log in to add items to your cart.', {
         position: 'top-center',
         toastId: 'login-toast',
@@ -29,7 +27,7 @@ const Card = ({ product }) => {
       navigate('/login');
     
     } else {
-      // Add item to cart if authenticated
+    
       dispatch(addToCart(product));
       toast.success('Product added to Cart!', {
         position: 'top-center',
@@ -46,7 +44,7 @@ const Card = ({ product }) => {
     e.preventDefault();
 
     if (!isAuthenticated) {
-      // Redirect to login page if not authenticated
+    
       navigate('/login');
       toast.info('Please log in to add items to your favorites.', {
         position: 'top-center',

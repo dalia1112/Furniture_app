@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as Yup from "yup";
-import styles from "../Auth/Auth.module.css";
+import styles from "./register.module.css";
 
 const Register = () => {
   const [hidePassword, setHidePassword] = useState(true);

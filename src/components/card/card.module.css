@@ -30,7 +30,7 @@
 .price {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #72290c; /* Green for visibility */
+  color: #72290c; 
 }
 
 .oldprice {
@@ -65,12 +65,12 @@
 }
 
 .carticon:hover {
-  color: #782a0e; /* Green */
+  color: #782a0e; 
   transform: scale(1.1);
 }
 
 .hearticon:hover {
-  color: #dc3545; /* Red */
+  color: #dc3545; 
   transform: scale(1.1);
 }
 
