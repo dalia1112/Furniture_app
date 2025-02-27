@@ -1,15 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
-import themeLanguageReducer from'../Slices/themelanslice' ;
-import productReducer from '../Slices/productSlice';
+import themeLanguageReducer from'../Slices/themeslice' ;
 import cartReducer from '../Slices/cartSlice'
 import favourieReducer from '../Slices/favouriteSlice'
+import categoryReducer from '../Slices/categoriesSlice';
+import authReducer from '../Slices/AuthSlice'
+
 const store= configureStore(
   {
     reducer:{
       themeLanguage:themeLanguageReducer,
-      products: productReducer,
+      categories: categoryReducer,
       cart: cartReducer, 
-      favourite:favourieReducer
+      favourite:favourieReducer,
+      auth:authReducer
 
     }
   }

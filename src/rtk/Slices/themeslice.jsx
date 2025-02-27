@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const themeLanguageSlice = createSlice(
+const themeSlice = createSlice(
   {
-    name:"themeLanguge",
+    name:"theme",
     initialState:{
       theme:"light",
       languge:"EN"
@@ -17,5 +17,5 @@ const themeLanguageSlice = createSlice(
    }
   }
 )
-export const {ToggleTheme,ChangLanguage} = themeLanguageSlice.actions
-export default themeLanguageSlice.reducer
+export const {ToggleTheme,ChangLanguage} = themeSlice.actions
+export default themeSlice.reducer

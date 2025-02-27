@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { ToggleTheme } from "../../rtk/Slices/themelanslice";
+import { ToggleTheme } from "../../rtk/Slices/themeslice";
 import styles from './header.module.css'
+import { logout } from "../../rtk/Slices/AuthSlice";
 
 
 function Header() {
@@ -9,17 +10,18 @@ function Header() {
   const { theme } = useSelector((state) => state.themeLanguage);
   const buttonClass = `btn btn-${theme === "light" ? "light" : "dark"}`;
   const { cartItems } = useSelector((state) => state.cart);
+  const {isAuthenticated} =useSelector((state)=>state.auth)
 
   const routes = [
     { link: "Home", path: "/" },
     { link: "Furniture", path: "/furniture" },
     { link: "Contact", path: "/contact" },
-    { link: "About", path: "/about" },
+    // { link: "About", path: "/about" },
     { link: "SignUp", path: "/signup" },
   ];
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-${theme} bg-${theme}`}>
+    <nav className={`  navbar navbar-expand-lg navbar-${theme} bg-${theme} `}>
       <div className="container-fluid">
         {/* Brand */}
         <NavLink className="navbar-brand fw-bold" to="/">
@@ -86,6 +88,14 @@ function Header() {
               ) : (
                 <i className="bi bi-moon-stars fs-4"></i>
               )}
+            </button>
+            <button
+            onClick={() => dispatch(logout())}
+            className={buttonClass}
+            >
+              {isAuthenticated?<i className="bi bi-box-arrow-left"></i>: <i className="bi bi-box-arrow-right"></i>}
+            
+            
             </button>
           </div>
         </div>

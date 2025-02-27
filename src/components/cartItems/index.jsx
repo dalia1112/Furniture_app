@@ -13,7 +13,7 @@ const CartItems = () => {
       ) : (
         <>
           <h2 className={styles.cartTitle}>Your cart items</h2>
-          <a href="/" className={styles.backLink}>Back to shopping</a>
+          <a href="/furniture" className={styles.backLink}>Back to shopping</a>
 
           <div className={styles.cartContent}>
             <table className={styles.cartTable}>

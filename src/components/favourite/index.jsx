@@ -22,8 +22,7 @@ const FavoriteItems = () => {
             <div key={product.id} className={styles.card}>
               <Link to={`/furniture/${product.id}`} className={styles.link}>
                 <img src={product.image} alt={product.title} className={styles.image} />
-                
-                {/* Title and Price in one row */}
+              
                 <div className={styles.infoContainer}>
                   <h3 className={styles.productTitle}>{product.title}</h3>
                   <p className={styles.price}>${product.price}</p>

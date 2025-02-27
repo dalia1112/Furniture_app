@@ -1,40 +1,42 @@
-import { useParams } from "react-router-dom"
+
+
+import { useParams } from "react-router-dom";
 import axiosInstance from "../Axios/axiosinstance";
 import { useQuery } from "react-query";
 import FurnitureDetails from "../components/furnitureDetails";
 
-
 const ProductDetails = () => {
-  const{id}=useParams();
-  const { data: product, error, isLoading } = useQuery(
-    {
-      queryKey:"products",
-      "queryFn":  async () => {
-        const response = await axiosInstance.get(`/products/${id}`);
-        console.log(response.data)
-        return response.data;
-      }
-    }
-    );
+  const { id } = useParams();
+
+  const {
+    data: categories,
+    error: categoriesError,
+    isLoading: categoriesLoading,
+  } = useQuery("categories", async () => {
+    const response = await axiosInstance.get("/categories");
+    return response.data;
+  });
+
+
+  const product = categories
+    ?.flatMap((category) => category.items)
+    .find((item) => item.id === parseInt(id)); 
 
   return (
     <>
-      {isLoading && <div>Loading...</div>}
-      {error && <div>An error occurred: {error.message}</div>}
-      {!error && !isLoading && (
-        // <div className='row'>
-          
-        //    <Card key={products.id} product={products} />;
-          
-        // </div>
-      <div>
-          
-          <FurnitureDetails product={product}/>
-      </div>
-
+      {categoriesLoading && <div>Loading...</div>}
+      {categoriesError && <div>An error occurred: {categoriesError.message}</div>}
+      {!categoriesLoading && !categoriesError && (
+        <div>
+          {product ? (
+            <FurnitureDetails product={product} />
+          ) : (
+            <div>Product not found.</div>
+          )}
+        </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;
