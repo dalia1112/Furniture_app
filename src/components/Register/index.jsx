@@ -43,7 +43,7 @@ const Register = () => {
     },
   });
 
-  // Reset the form when the component mounts
+  
   useEffect(() => {
     formik.resetForm();
   }, []);

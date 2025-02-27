@@ -6,8 +6,6 @@ import { fetchCategories } from "../../rtk/Slices/categoriesSlice";
 const Products = () => {
   const dispatch = useDispatch();
   const { items, status, error } = useSelector((state) => state.categories);
-
-  // Get the first category's items
   const firstCategoryItems = items.length > 0 ? items[0].items : [];
 
   useEffect(() => {

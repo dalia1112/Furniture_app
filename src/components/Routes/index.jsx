@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "../../pages/Home"
-import About from "../../pages/About"
 import Furniture from "../../pages/Furniture"
 import Contact from "../../pages/Contact"
 import Signup from "../../pages/signup"
@@ -9,10 +8,8 @@ import Cart from "../../pages/Cart"
 import Favourite from "../../pages/favourite"
 import Register from "../Register"
 import Login from "../Login"
-
-import CreateAccountPage from "../../pages/account"
-import AddProjectPage from "../../pages/addprojectpage"
 import ProtectedRoute from "../protectedRoute"
+import AddProduct from "../../pages/addproduct"
 
 
 const AllRoutes = () => {
@@ -22,7 +19,6 @@ const AllRoutes = () => {
       <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/furniture' element={<Furniture/>}/>
-      <Route path='/contact' element={<Contact/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/furniture/:id' element={<ProductDetails/>}/>
       <Route path='/cart' element={<Cart/>}/>
@@ -30,19 +26,17 @@ const AllRoutes = () => {
       <Route path='/register' element={<Register/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route
-          path="/create-account"
+          path="/contact"
           element={
             <ProtectedRoute>
-              <CreateAccountPage />
+              <Contact/>
             </ProtectedRoute>
           }
         />
         <Route
-          path="/add-project"
+          path="/addproduct"
           element={
-            <ProtectedRoute>
-              <AddProjectPage />
-            </ProtectedRoute>
+          <AddProduct/>
           }
         />
     </Routes>

@@ -16,6 +16,7 @@ function Header() {
     { link: "Home", path: "/" },
     { link: "Furniture", path: "/furniture" },
     { link: "Contact", path: "/contact" },
+    { link: "Add Product", path: "/addproduct" },
     { link: "SignUp", path: "/signup" },
   ];
 

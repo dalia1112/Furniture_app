@@ -37,7 +37,7 @@ const CartItems = () => {
                         </button>
                       </div>
                     </td>
-                    <td>${item.price.toFixed(2)}</td>
+                    <td>${item.price}</td>
                     <td>
                       <div className={styles.quantityControl}>
                         <button 

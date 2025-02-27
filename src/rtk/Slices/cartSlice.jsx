@@ -11,9 +11,9 @@ const cartSlice = createSlice({
       const existingItem = state.cartItems.find((item) => item.id === product.id);
 
       if (existingItem) {
-        existingItem.quantity += 1; // If item exists, increase quantity
+        existingItem.quantity += 1; 
       } else {
-        state.cartItems.push({ ...product, quantity: 1 }); // Otherwise, add it with quantity 1
+        state.cartItems.push({ ...product, quantity: 1 }); 
       }
     },
     removeFromCart: (state, action) => {
@@ -24,7 +24,7 @@ const cartSlice = createSlice({
       const existingItem = state.cartItems.find((item) => item.id === id);
 
       if (existingItem) {
-        existingItem.quantity = quantity > 0 ? quantity : 1; // Ensure quantity doesn't go below 1
+        existingItem.quantity = quantity > 0 ? quantity : 1; 
       }
     },
   },

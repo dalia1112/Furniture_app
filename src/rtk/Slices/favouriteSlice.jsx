@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const favouriteSlice = createSlice({
   name: "favourite",
-  initialState: [], // Fix: Store directly as an array
+  initialState: [], 
   reducers: {
     addToFavourite: (state, action) => {
       const exists = state.find((item) => item.id === action.payload.id);

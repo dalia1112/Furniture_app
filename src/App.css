@@ -86,7 +86,7 @@ html, body {
     margin-left: 45%;
     margin-bottom: 20px;
     cursor: pointer;
-    background-color: rgb(114, 92, 66);
+    background-color: #725c42;
     color:white
 }
 .invalid-feedback{
