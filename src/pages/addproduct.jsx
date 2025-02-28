@@ -34,9 +34,7 @@ const AddProduct = () => {
   };
 
   const onSubmit = (data) => {
-    if (imageUrl) {
-      data.image = imageUrl;
-    } else {
+    if (!imageUrl) {
       toast.error("Please upload an image for the product.", {
         position: "top-center",
         autoClose: 3000,
@@ -46,11 +44,11 @@ const AddProduct = () => {
 
     const newProduct = {
       ...data,
-      id: Date.now(), 
-      categoryId: Number(data.category), 
+      id: Date.now(),
+      categoryId: Number(data.category),
+      image: imageUrl,
     };
 
-    console.log("New product data:", newProduct); 
     dispatch(addProduct({ categoryId: Number(data.category), product: newProduct }));
 
     reset();
@@ -62,9 +60,9 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="container w-75 m-auto p-5">
-      <ToastContainer /> 
-      <div className="card shadow-lg p-5">
+    <div className="container mt-5">
+      <ToastContainer />
+      <div className="card shadow-lg p-4 col-md-8 col-lg-6 mx-auto">
         <h3 className="text-center mb-4" style={{ color: "#725c42" }}>
           Add New Product
         </h3>
@@ -80,7 +78,16 @@ const AddProduct = () => {
               className="form-control"
               onChange={(e) => uploadImage(e.target.files[0])}
             />
-            {imageUrl && <img src={imageUrl} alt="Preview" className="mt-2 img-thumbnail" width="150" />}
+            {imageUrl && (
+              <div className="d-flex justify-content-center mt-3">
+                <img
+                  src={imageUrl}
+                  alt="Preview"
+                  className="img-thumbnail"
+                  style={{ maxWidth: "100%", height: "auto", maxHeight: "150px" }}
+                />
+              </div>
+            )}
           </div>
           <div className="mb-3">
             <label className="form-label fw-bold">Price</label>
@@ -95,11 +102,10 @@ const AddProduct = () => {
               ))}
             </select>
           </div>
-          
           <button
             type="submit"
             className="btn w-100"
-            style={{ backgroundColor: "#725c42", color: "white" }}
+            style={{ backgroundColor: "#725c42", color: "white", fontSize: "1rem", padding: "10px" }}
           >
             Add Product
           </button>

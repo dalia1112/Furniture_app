@@ -7,9 +7,11 @@ import ProductDetails from "../../pages/ProductDetails"
 import Cart from "../../pages/Cart"
 import Favourite from "../../pages/favourite"
 import Register from "../Register"
-import Login from "../Login"
+
 import ProtectedRoute from "../protectedRoute"
 import AddProduct from "../../pages/addproduct"
+import Login from "../Login"
+
 
 
 const AllRoutes = () => {
